@@ -7085,6 +7085,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Renderer: {fileID: 546380357}
   m_MaterialIndex: 0
+--- !u!1 &857465806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7116999918376793547, guid: df9e7420c4abdb14abb3ed41cee53fed, type: 3}
+  m_PrefabInstance: {fileID: 8214610930460209463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &857465808
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857465806}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &873179097
 GameObject:
   m_ObjectHideFlags: 0
@@ -15162,6 +15189,7 @@ GameObject:
   - component: {fileID: 2127920312}
   - component: {fileID: 2127920315}
   - component: {fileID: 2127920314}
+  - component: {fileID: 2127920317}
   - component: {fileID: 2127920316}
   m_Layer: 0
   m_Name: Tattoo
@@ -15206,8 +15234,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127920311}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.050254945, y: 0.9839959, z: -0.064064875, w: 0.15850024}
-  m_LocalPosition: {x: 8.001, y: 1.087, z: 3.36}
+  m_LocalRotation: {x: -0.050254975, y: 0.9839959, z: -0.06406486, w: 0.15850025}
+  m_LocalPosition: {x: 8.0149, y: 1.0796995, z: 3.3656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -15391,6 +15419,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2127920317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127920311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f4846063400d146bcef76529cd6ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TattooInteract
 --- !u!1 &2140134476
 GameObject:
   m_ObjectHideFlags: 0
@@ -17867,6 +17907,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7116999918376793547, guid: df9e7420c4abdb14abb3ed41cee53fed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 857465808}
     - targetCorrespondingSourceObject: {fileID: 8401254425859320159, guid: df9e7420c4abdb14abb3ed41cee53fed, type: 3}
       insertIndex: -1
       addedObject: {fileID: 733438035}
