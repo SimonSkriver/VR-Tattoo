@@ -2,15 +2,32 @@ using UnityEngine;
 
 public class TattooInteract : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] Transform controllerTransform;
+    [SerializeField] bool isHoldingTattoo;
+    [SerializeField] LayerMask bodyLayer;
+
+    public void EnableTattooHoldBool()
     {
-        
+        isHoldingTattoo = true;
     }
 
-    // Update is called once per frame
+    public void DisableTattooHoldBool()
+    {
+        isHoldingTattoo = false;
+    }
+
     void Update()
     {
-        
+        if (!isHoldingTattoo) return;
+        HandleTattooPlacement();
+    }
+
+    void HandleTattooPlacement()
+    {
+        Ray ray = new Ray(controllerTransform.position, controllerTransform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, 5, bodyLayer))
+        {
+            
+        }
     }
 }
