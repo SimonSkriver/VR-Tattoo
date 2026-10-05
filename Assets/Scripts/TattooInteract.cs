@@ -1,18 +1,33 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class TattooInteract : MonoBehaviour
 {
     [SerializeField] Transform controllerTransform;
     [SerializeField] bool isHoldingTattoo;
     [SerializeField] LayerMask bodyLayer;
+    [SerializeField] DecalProjector projector;
+    [SerializeField] Transform placeHolder;
+    [SerializeField, Min(0f)] float surfaceOffset = 0.1f;
 
-    public void EnableTattooHoldBool()
+    RaycastHit hit;
+
+    public void TattooStartInteract()
     {
         isHoldingTattoo = true;
+        Debug.Log("Tattoo interacted");
     }
 
-    public void DisableTattooHoldBool()
+    public void TattooStopInteract()
     {
+        Debug.Log("Tattoo stop interacted");
+        if (hit.collider != null && hit.transform.CompareTag("Body"))
+        {
+            //projector.transform.position = hit.point + hit.normal * surfaceOffset;
+            projector.transform.forward = -hit.normal;
+            Debug.Log("Tatto placed");
+        }
+
         isHoldingTattoo = false;
     }
 
@@ -25,9 +40,15 @@ public class TattooInteract : MonoBehaviour
     void HandleTattooPlacement()
     {
         Ray ray = new Ray(controllerTransform.position, controllerTransform.forward);
-        if (Physics.Raycast(ray, out RaycastHit hit, 5, bodyLayer))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, bodyLayer))
         {
-            
+            projector.enabled = true;
+            //  projector.transform.position = hit.point + hit.normal * surfaceOffset;
+            //projector.transform.forward = -hit.normal;
+        }
+        else
+        {
+            projector.enabled = false;
         }
     }
 }
