@@ -646,9 +646,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6796636568058447308}
   - component: {fileID: 2335987257449610239}
-  m_Layer: 0
+  - component: {fileID: 2797079711921537549}
+  m_Layer: 7
   m_Name: Mesh
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -690,7 +691,7 @@ SkinnedMeshRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -6922793697723135513, guid: 9e1a3252b2e85724ebf9cc3e4668f3db, type: 3}
@@ -806,6 +807,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00006675767, y: -0.0018075637, z: 0.00008992944}
     m_Extent: {x: 0.0040941257, y: 0.0089756865, z: 0.002366061}
   m_DirtyAABB: 0
+--- !u!64 &2797079711921537549
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416853854255780833}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2587728142464308781, guid: 9e1a3252b2e85724ebf9cc3e4668f3db, type: 3}
 --- !u!1 &2453081447066706787
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +968,7 @@ GameObject:
   - component: {fileID: 8856844663222855162}
   - component: {fileID: 7515066167453191654}
   - component: {fileID: 257996458317580225}
+  - component: {fileID: 6678600037350864061}
   m_Layer: 0
   m_Name: LeftArmTarget
   m_TagString: Untagged
@@ -1114,8 +1138,8 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_UnparentTransformOnGrab: 1
-  m_RetainTransformParent: 1
+  m_UnparentTransformOnGrab: 0
+  m_RetainTransformParent: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
@@ -1124,6 +1148,27 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!135 &6678600037350864061
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666188848018065084}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2682353326528189682
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,6 +3706,7 @@ GameObject:
   - component: {fileID: 8603058419253643223}
   - component: {fileID: 5838576698216660645}
   - component: {fileID: 2346282563959519739}
+  - component: {fileID: 2033813366171857479}
   m_Layer: 0
   m_Name: RightArmTarget
   m_TagString: Untagged
@@ -3830,8 +3876,8 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_UnparentTransformOnGrab: 1
-  m_RetainTransformParent: 1
+  m_UnparentTransformOnGrab: 0
+  m_RetainTransformParent: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
@@ -3840,3 +3886,24 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!135 &2033813366171857479
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9008352831798464586}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}

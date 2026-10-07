@@ -2277,6 +2277,7 @@ GameObject:
   - component: {fileID: 7427464110480146058}
   - component: {fileID: 5735545734321488429}
   - component: {fileID: 2729514651233982493}
+  - component: {fileID: 5253152110766471830}
   m_Layer: 0
   m_Name: RightArmTarget
   m_TagString: Untagged
@@ -2446,8 +2447,8 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_UnparentTransformOnGrab: 1
-  m_RetainTransformParent: 1
+  m_UnparentTransformOnGrab: 0
+  m_RetainTransformParent: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
@@ -2456,6 +2457,27 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!135 &5253152110766471830
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5537294931968326951}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5561166051308884933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,9 +3004,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8661776658291467499}
   - component: {fileID: 5653474840636994050}
-  m_Layer: 0
+  - component: {fileID: 1287415105878822444}
+  m_Layer: 7
   m_Name: Mesh
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3026,7 +3049,7 @@ SkinnedMeshRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 4874126678125670354, guid: 275c867c030ffcf4c8bc4a4722a577e2, type: 3}
@@ -3142,6 +3165,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000029570889, y: -0.0018463649, z: 0.0003885621}
     m_Extent: {x: 0.005059511, y: 0.009485183, z: 0.002674668}
   m_DirtyAABB: 0
+--- !u!64 &1287415105878822444
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116999918376793547}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7441087375160281586, guid: 275c867c030ffcf4c8bc4a4722a577e2, type: 3}
 --- !u!1 &7246109508146188168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3407,6 +3452,7 @@ GameObject:
   - component: {fileID: 217656264900485888}
   - component: {fileID: 7783244150129761885}
   - component: {fileID: 532747763779167697}
+  - component: {fileID: 6187725174559340521}
   m_Layer: 0
   m_Name: LeftArmTarget
   m_TagString: Untagged
@@ -3556,7 +3602,7 @@ MonoBehaviour:
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
-  m_ThrowOnDetach: 1
+  m_ThrowOnDetach: 0
   m_ThrowSmoothingDuration: 0.25
   m_ThrowSmoothingCurve:
     serializedVersion: 2
@@ -3576,8 +3622,8 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_UnparentTransformOnGrab: 1
-  m_RetainTransformParent: 1
+  m_UnparentTransformOnGrab: 0
+  m_RetainTransformParent: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
@@ -3586,6 +3632,27 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!135 &6187725174559340521
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401254425859320159}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8554264527248978836
 GameObject:
   m_ObjectHideFlags: 0

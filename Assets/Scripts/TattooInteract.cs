@@ -7,7 +7,6 @@ public class TattooInteract : MonoBehaviour
     [SerializeField] bool isHoldingTattoo;
     [SerializeField] LayerMask bodyLayer;
     [SerializeField] DecalProjector projector;
-    [SerializeField] Transform placeHolder;
     [SerializeField, Min(0f)] float surfaceOffset = 0.1f;
 
     RaycastHit hit;
@@ -43,6 +42,7 @@ public class TattooInteract : MonoBehaviour
             projector.enabled = true;
             projector.transform.position = hit.point + hit.normal * surfaceOffset;
             projector.transform.forward = -hit.normal;
+            projector.transform.rotation = controllerTransform.rotation;
         }
         else
         {
