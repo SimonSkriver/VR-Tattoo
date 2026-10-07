@@ -23,9 +23,7 @@ public class TattooInteract : MonoBehaviour
         Debug.Log("Tattoo stop interacted");
         if (hit.collider != null && hit.transform.CompareTag("Body"))
         {
-            //projector.transform.position = hit.point + hit.normal * surfaceOffset;
-            projector.transform.forward = -hit.normal;
-            Debug.Log("Tatto placed");
+            Debug.Log("Tattoo placed");
         }
 
         isHoldingTattoo = false;
@@ -43,8 +41,8 @@ public class TattooInteract : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, bodyLayer))
         {
             projector.enabled = true;
-            //  projector.transform.position = hit.point + hit.normal * surfaceOffset;
-            //projector.transform.forward = -hit.normal;
+            projector.transform.position = hit.point + hit.normal * surfaceOffset;
+            projector.transform.forward = -hit.normal;
         }
         else
         {
